@@ -1,3 +1,5 @@
+import { useLanguage } from "../contexts/LanguageContext";
+
 const projects = [
   {
     id: 1,
@@ -38,9 +40,14 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="projects" className="py-24 bg-grid">
       <div className="container mx-auto px-6">
+        <h2 className="font-mono text-3xl font-medium text-foreground mb-12 text-center">
+          {t('projects.title')}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <article

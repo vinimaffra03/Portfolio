@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   const [uptime, setUptime] = useState("00:00:00");
 
@@ -37,10 +39,10 @@ const Footer = () => {
         {/* Terminal prompt line */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
           <div className="font-mono text-sm flex items-center gap-1">
-            <span className="text-muted-foreground">viniciushmdem15@</span>
-            <span className="text-foreground">gmail.com</span>
+            <span className="text-muted-foreground">{t('footer.prompt')}</span>
+            <span className="text-foreground">{t('footer.domain')}</span>
             <span className="text-muted-foreground">:~$</span>
-            <span className="text-highlight ml-2">whoami</span>
+            <span className="text-highlight ml-2">{t('footer.command')}</span>
             <span className="text-foreground ml-1 animate-pulse">|</span>
           </div>
 

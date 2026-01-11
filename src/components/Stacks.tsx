@@ -1,3 +1,5 @@
+import { useLanguage } from "../contexts/LanguageContext";
+
 const mainStacks = [
   { name: "JavaScript", color: "bg-yellow-400", textColor: "text-black" },
   { name: "React", color: "bg-cyan-500", textColor: "text-black" },
@@ -18,6 +20,8 @@ const learningStacks = [
 ];
 
 const Stacks = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="stacks" className="py-16 bg-grid">
       <div className="container mx-auto px-6">
@@ -25,11 +29,11 @@ const Stacks = () => {
         <div className="text-center mb-10">
           <div className="inline-flex items-center px-3 py-1.5 rounded-full border border-subtle bg-secondary/50 mb-4">
             <span className="font-mono text-xs text-foreground">
-              Tech Stack
+              {t('stacks.title')}
             </span>
           </div>
           <h2 className="font-mono text-xl md:text-2xl font-medium text-foreground">
-            Technologies I work with
+            {t('stacks.subtitle')}
           </h2>
         </div>
 
@@ -37,7 +41,7 @@ const Stacks = () => {
           {/* Main Tools & Languages */}
           <div>
             <h3 className="font-mono text-sm font-medium text-foreground mb-3">
-              Main Tools & Languages
+              {t('stacks.main')}
             </h3>
             <div className="flex flex-wrap gap-2">
               {mainStacks.map((stack) => (
@@ -54,7 +58,7 @@ const Stacks = () => {
           {/* Currently Learning */}
           <div>
             <h3 className="font-mono text-sm font-medium text-foreground mb-3">
-              Currently Learning
+              {t('stacks.learning')}
             </h3>
             <div className="flex flex-wrap gap-2">
               {learningStacks.map((stack) => (

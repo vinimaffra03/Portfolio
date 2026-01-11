@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navLinks = [
-    { href: "#projects", label: "projects" },
-    { href: "#manifesto", label: "manifesto" },
-    { href: "#stacks", label: "stacks" },
+    { href: "#projects", label: t('nav.projects') },
+    { href: "#manifesto", label: t('nav.manifesto') },
+    { href: "#stacks", label: t('nav.stacks') },
   ];
 
   return (
@@ -26,18 +28,30 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-8">
+            <ul className="flex items-center gap-8">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            
+            {/* Language Toggle Button */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 font-mono text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 px-3 py-2 border border-subtle rounded-lg hover:border-foreground/30"
+              aria-label="Toggle language"
+            >
+              <Globe size={16} />
+              {language === 'en' ? 'EN' : 'PT'}
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -64,6 +78,19 @@ const Header = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={() => {
+                    toggleLanguage();
+                    setIsMenuOpen(false);
+                  }}
+                  className="flex items-center gap-2 font-mono text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 w-full text-left"
+                  aria-label="Toggle language"
+                >
+                  <Globe size={16} />
+                  {language === 'en' ? 'English' : 'Português'}
+                </button>
+              </li>
             </ul>
           </div>
         )}
