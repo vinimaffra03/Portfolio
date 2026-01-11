@@ -1,0 +1,32 @@
+<svg
+  width="128"
+  height="128"
+  viewBox="0 0 128 128"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Fundo preto (antes era branco) -->
+  <circle cx="64" cy="64" r="60" fill="#000000" />
+
+  <!-- Borda branca (antes era preta) -->
+  <circle
+    cx="64"
+    cy="64"
+    r="60"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="6"
+  />
+
+  <!-- Símbolo </> em branco (antes era preto) -->
+  <text
+    x="64"
+    y="78"
+    text-anchor="middle"
+    font-size="56"
+    font-family="Arial, Helvetica, sans-serif"
+    fill="#FFFFFF"
+    font-weight="bold"
+  >
+    &lt;/&gt;
+  </text>
+</svg>
