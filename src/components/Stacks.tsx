@@ -1,21 +1,28 @@
 import { useLanguage } from "../contexts/LanguageContext";
 
 const mainStacks = [
-  { name: "JavaScript", color: "bg-yellow-400", textColor: "text-black" },
+  { name: "Python", color: "bg-yellow-400", textColor: "text-black" },
+  { name: "TypeScript", color: "bg-blue-600", textColor: "text-white" },
   { name: "React", color: "bg-cyan-500", textColor: "text-black" },
-  { name: "Node.js", color: "bg-green-600", textColor: "text-white" },
-  { name: "MongoDB", color: "bg-green-500", textColor: "text-white" },
-  { name: "PostgreSQL", color: "bg-blue-700", textColor: "text-white" },
   { name: "Next.js", color: "bg-black border border-white/20", textColor: "text-white" },
+  { name: "FastAPI", color: "bg-teal-600", textColor: "text-white" },
+  { name: "Node.js", color: "bg-green-600", textColor: "text-white" },
   { name: "NestJS", color: "bg-red-600", textColor: "text-white" },
+  { name: "PostgreSQL", color: "bg-blue-700", textColor: "text-white" },
   { name: "Prisma", color: "bg-slate-800", textColor: "text-white" },
+  { name: "Tailwind", color: "bg-cyan-700", textColor: "text-white" },
+  { name: "Telegram API", color: "bg-sky-500", textColor: "text-white" },
   { name: "Git", color: "bg-orange-600", textColor: "text-white" },
   { name: "GitHub", color: "bg-gray-800", textColor: "text-white" },
 ];
 
 const learningStacks = [
-  { name: "TypeScript", color: "bg-blue-600", textColor: "text-white" },
-  { name: "GraphQL", color: "bg-pink-600", textColor: "text-white" },
+  { name: "Cairo", color: "bg-purple-600", textColor: "text-white" },
+  { name: "Starknet", color: "bg-indigo-600", textColor: "text-white" },
+  { name: "Solidity", color: "bg-slate-600", textColor: "text-white" },
+  { name: "Supabase", color: "bg-green-500", textColor: "text-white" },
+  { name: "Clerk", color: "bg-violet-600", textColor: "text-white" },
+  { name: "Stripe", color: "bg-indigo-500", textColor: "text-white" },
   { name: "Docker", color: "bg-blue-500", textColor: "text-white" },
 ];
 

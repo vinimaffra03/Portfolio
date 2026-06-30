@@ -14,51 +14,51 @@ const translations: Translations = {
   'nav.projects': { en: 'projects', pt: 'projetos' },
   'nav.stacks': { en: 'stacks', pt: 'tecnologias' },
   'nav.manifesto': { en: 'manifesto', pt: 'manifesto' },
-  
+
   // Hero Section
-  'hero.trust': { en: 'Trusted by 10+ companies', pt: 'Confiado por 10+ empresas' },
-  'hero.line1': { en: 'Websites are the clearest representation', pt: 'Sites são a representação mais clara' },
-  'hero.line2': { en: 'of a company\'s technological prowess.', pt: 'do poderio tecnológico de uma empresa.' },
-  'hero.line3': { en: 'I build them.', pt: 'Eu os construo.' },
-  'hero.cta': { en: 'Let\'s Work Together', pt: 'Vamos Trabalhar Juntos' },
-  'hero.ctaSubtext': { en: 'Schedule a 30-minute call', pt: 'Agende uma chamada de 30 minutos' },
-  'hero.scroll': { en: 'Scroll Down', pt: 'Role para Baixo' },
-  
+  'hero.trust': { en: 'Full-stack / Web3 / automation', pt: 'Full-stack / Web3 / automacao' },
+  'hero.line1': { en: 'I build web products,', pt: 'Eu construo produtos web,' },
+  'hero.line2': { en: 'Web3 apps and backend systems.', pt: 'apps Web3 e sistemas backend.' },
+  'hero.line3': { en: 'From idea to working software.', pt: 'Da ideia ao software funcionando.' },
+  'hero.cta': { en: 'Let\'s Work Together', pt: 'Vamos trabalhar juntos' },
+  'hero.ctaSubtext': { en: 'React, Next.js, Python, APIs and smart contracts', pt: 'React, Next.js, Python, APIs e smart contracts' },
+  'hero.scroll': { en: 'Scroll Down', pt: 'Role para baixo' },
+
   // Projects Section
   'projects.title': { en: 'Featured Projects', pt: 'Projetos em Destaque' },
-  
+
   // Manifesto Section
   'manifesto.title': { en: 'Manifesto', pt: 'Manifesto' },
-  'manifesto.subtitle': { en: 'My Work Philosophy', pt: 'Minha Filosofia de Trabalho' },
-  'manifesto.text1': { en: 'From the beginning to where I stand today in my career', pt: 'Do início até onde estou hoje na minha carreira' },
+  'manifesto.subtitle': { en: 'My Work Philosophy', pt: 'Minha filosofia de trabalho' },
+  'manifesto.text1': { en: 'From my first projects to the systems I build today', pt: 'Dos meus primeiros projetos aos sistemas que construo hoje' },
   'manifesto.experience': { en: '[3+ years]', pt: '[3+ anos]' },
-  'manifesto.text2': { en: ', I\'ve understood that', pt: ', entendi que' },
-  'manifesto.websites': { en: 'websites', pt: 'sites' },
-  'manifesto.text3': { en: 'are not mere portals to connect users to companies. They mean something more: they are a', pt: 'não são meros portais para conectar usuários a empresas. Eles significam algo mais: são uma' },
-  'manifesto.representation': { en: 'clear representation of technological prowess', pt: 'representação clara do poderio tecnológico' },
-  'manifesto.text4': { en: 'of a company. By having a', pt: 'de uma empresa. Ao ter um' },
+  'manifesto.text2': { en: ', I have learned that', pt: ', aprendi que' },
+  'manifesto.websites': { en: 'software', pt: 'software' },
+  'manifesto.text3': { en: 'should not only look good. It should solve a real workflow, reduce manual work, and become a', pt: 'nao deve apenas parecer bom. Ele deve resolver um fluxo real, reduzir trabalho manual e se tornar uma' },
+  'manifesto.representation': { en: 'clear operational advantage', pt: 'vantagem operacional clara' },
+  'manifesto.text4': { en: 'for the people using it. By building a', pt: 'para quem usa. Ao construir um' },
   'manifesto.by': { en: '', pt: '' },
-  'manifesto.strongWebsite': { en: 'strong and captivating website', pt: 'site forte e cativante' },
-  'manifesto.text5': { en: ', it becomes clear that the company is a', pt: ', fica claro que a empresa é uma' },
-  'manifesto.force': { en: 'force to be reckoned with', pt: 'força a ser reconhecida' },
-  'manifesto.text6': { en: 'in its market.', pt: 'em seu mercado.' },
-  
+  'manifesto.strongWebsite': { en: 'reliable automation system', pt: 'sistema de automacao confiavel' },
+  'manifesto.text5': { en: ', a business can move faster, understand more, and become a', pt: ', um negocio consegue se mover mais rapido, entender mais e se tornar uma' },
+  'manifesto.force': { en: 'more capable operation', pt: 'operacao mais capaz' },
+  'manifesto.text6': { en: 'in its market.', pt: 'no seu mercado.' },
+
   // Stacks Section
   'stacks.title': { en: 'Tech Stack', pt: 'Tecnologias' },
-  'stacks.subtitle': { en: 'Technologies I work with', pt: 'Tecnologias que trabalho' },
-  'stacks.main': { en: 'Main Tools & Languages', pt: 'Principais Ferramentas & Linguagens' },
-  'stacks.learning': { en: 'Currently Learning', pt: 'Aprendendo Atualmente' },
-  
+  'stacks.subtitle': { en: 'Technologies I use to ship real products', pt: 'Tecnologias que uso para entregar produtos reais' },
+  'stacks.main': { en: 'Main Tools & Languages', pt: 'Principais ferramentas e linguagens' },
+  'stacks.learning': { en: 'Also Building With', pt: 'Tambem construo com' },
+
   // Contact Section
-  'contact.title': { en: 'Let\'s Connect', pt: 'Vamos Conectar' },
+  'contact.title': { en: 'Let\'s Connect', pt: 'Vamos conectar' },
   'contact.heading': { en: 'Ready to build something', pt: 'Pronto para construir algo' },
-  'contact.highlight': { en: 'amazing', pt: 'incrível' },
-  'contact.description': { en: 'I\'m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.', pt: 'Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte da sua visão.' },
-  'contact.button': { en: 'Get in Touch', pt: 'Entre em Contato' },
-  
+  'contact.highlight': { en: 'useful', pt: 'util' },
+  'contact.description': { en: 'I am open to web apps, Web3 products, API integrations, Python automation, dashboards and backend work.', pt: 'Estou aberto a web apps, produtos Web3, integracoes de API, automacao Python, dashboards e backend.' },
+  'contact.button': { en: 'Get in Touch', pt: 'Entre em contato' },
+
   // Footer
-  'footer.prompt': { en: 'user@', pt: 'usuário@' },
-  'footer.domain': { en: 'viniciusmaffra.dev', pt: 'viniciushmdem15@gmail.com' },
+  'footer.prompt': { en: 'builder@', pt: 'builder@' },
+  'footer.domain': { en: 'viniciusmaffra.dev', pt: 'viniciusmaffra.dev' },
   'footer.command': { en: 'whoami', pt: 'quem_eu_sou' },
 };
 

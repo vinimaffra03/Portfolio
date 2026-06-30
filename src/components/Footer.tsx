@@ -30,7 +30,7 @@ const Footer = () => {
   const socialLinks = [
     { href: "https://github.com/vinimaffra03", label: "github", color: "bg-green-500" },
     { href: "https://www.linkedin.com/in/viniciusmaffra/", label: "linkedin", color: "bg-green-500" },
-    { href: "https://twitter.com", label: "twitter", color: "bg-yellow-500" },
+    { href: "mailto:viniciushmdem15@gmail.com", label: "email", color: "bg-yellow-500" },
   ];
 
   return (
@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Copyright line */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 mt-4 pt-4 border-t border-subtle">
           <span className="font-mono text-xs text-muted-foreground">
-            © {currentYear} Vinicius Maffra. All rights reserved.
+            (c) {currentYear} Vinicius Maffra. All rights reserved.
           </span>
           
           <span className="font-mono text-xs text-muted-foreground">
