@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import BlurText from "./reactbits/BlurText";
 
 const techBadges = [
   {
@@ -50,8 +51,8 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         {/* Trust badge */}
-        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-subtle bg-secondary/50 mb-10 animate-fade-in">
-          <div className="flex -space-x-1.5">
+        <div className="inline-flex max-w-full items-center gap-3 px-5 py-2.5 rounded-full border border-subtle bg-secondary/50 mb-10 animate-fade-in">
+          <div className="flex shrink-0 -space-x-1.5">
             {techBadges.map((badge) => (
               <span
                 key={badge.name}
@@ -62,18 +63,42 @@ const Hero = () => {
               </span>
             ))}
           </div>
-          <span className="font-mono text-sm text-muted-foreground">
+          <span className="min-w-0 truncate font-mono text-sm text-muted-foreground">
             {t('hero.trust')}
           </span>
         </div>
 
         {/* Main heading */}
-        <h1 className="font-mono text-3xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8 max-w-4xl mx-auto animate-slide-up">
-          <span className="text-foreground">{t('hero.line1')}</span>
-          <br />
-          <span className="text-foreground">{t('hero.line2')}</span>
-          <br />
-          <span className="text-highlight">{t('hero.line3')}</span>
+        <h1 className="mx-auto mb-8 w-full max-w-[calc(100vw-3rem)] font-mono text-xl font-medium leading-tight animate-slide-up sm:max-w-4xl sm:text-3xl md:text-5xl lg:text-6xl">
+          <BlurText
+            as="span"
+            text={t("hero.line1")}
+            className="w-full max-w-full justify-center text-foreground"
+            delay={45}
+            animateBy="words"
+            direction="bottom"
+            stepDuration={0.24}
+          />
+          <BlurText
+            as="span"
+            text={t("hero.line2")}
+            className="w-full max-w-full justify-center text-foreground"
+            delay={45}
+            animateBy="words"
+            direction="bottom"
+            rootMargin="-10px"
+            stepDuration={0.24}
+          />
+          <BlurText
+            as="span"
+            text={t("hero.line3")}
+            className="w-full max-w-full justify-center text-highlight"
+            delay={45}
+            animateBy="words"
+            direction="bottom"
+            rootMargin="-20px"
+            stepDuration={0.24}
+          />
         </h1>
 
         {/* CTA Button */}
@@ -84,7 +109,7 @@ const Hero = () => {
           >
             {t('hero.cta')}
           </a>
-          <span className="font-mono text-xs text-muted-foreground">
+          <span className="max-w-full px-4 text-center font-mono text-xs text-muted-foreground">
             {t('hero.ctaSubtext')}
           </span>
         </div>

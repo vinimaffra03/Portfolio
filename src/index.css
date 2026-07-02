@@ -51,6 +51,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -75,16 +76,115 @@
     border-color: hsl(var(--border));
   }
 
+  .bg-grid,
+  .matrix-dots {
+    position: relative;
+    overflow: hidden;
+  }
+
   .bg-grid {
     background-image: 
-      linear-gradient(to right, hsl(var(--grid-color) / 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--grid-color) / 0.1) 1px, transparent 1px);
-    background-size: 24px 24px;
+      radial-gradient(circle at center, hsl(var(--foreground) / 0.16) 0.5px, transparent 1px),
+      linear-gradient(to right, hsl(var(--grid-color) / 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--grid-color) / 0.07) 1px, transparent 1px);
+    background-position: center;
+    background-size: 18px 18px, 32px 32px, 32px 32px;
   }
 
   .matrix-dots {
-    background-image: radial-gradient(circle, hsl(var(--grid-color) / 0.3) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-image:
+      radial-gradient(circle at center, hsl(var(--foreground) / 0.11) 0.5px, transparent 1px),
+      radial-gradient(circle at center, hsl(var(--grid-color) / 0.24) 1px, transparent 1px);
+    background-position: center;
+    background-size: 18px 18px, 24px 24px;
+  }
+
+  .bg-grid::before,
+  .bg-grid::after,
+  .matrix-dots::before,
+  .matrix-dots::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .bg-grid::before,
+  .matrix-dots::before {
+    opacity: 0.34;
+    background-image:
+      linear-gradient(62deg, transparent 0 42%, hsl(var(--foreground) / 0.16) 42.2% 42.6%, transparent 42.8% 100%),
+      linear-gradient(118deg, transparent 0 42%, hsl(var(--foreground) / 0.16) 42.2% 42.6%, transparent 42.8% 100%),
+      linear-gradient(to right, hsl(var(--foreground) / 0.13) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.13) 1px, transparent 1px);
+    background-position: center top, center top, center top, center top;
+    background-size: 110px 110px, 110px 110px, 52px 52px, 52px 52px;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 44%);
+    mask-image: linear-gradient(to bottom, black 0%, transparent 44%);
+  }
+
+  .matrix-dots::before {
+    opacity: 0.18;
+  }
+
+  .bg-grid::after,
+  .matrix-dots::after {
+    opacity: 0.22;
+    background-image:
+      radial-gradient(ellipse at 50% 100%, transparent 0 31%, hsl(var(--foreground) / 0.42) 31.4% 31.9%, transparent 32.3% 100%),
+      repeating-linear-gradient(104deg, transparent 0 36px, hsl(var(--foreground) / 0.38) 37px, transparent 39px),
+      repeating-linear-gradient(76deg, transparent 0 38px, hsl(var(--foreground) / 0.28) 39px, transparent 41px),
+      repeating-linear-gradient(0deg, transparent 0 20px, hsl(var(--foreground) / 0.28) 21px, transparent 22px);
+    background-position: center bottom;
+    background-size: 100% 46%, 72px 46%, 72px 46%, 100% 46%;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 52%);
+    mask-image: linear-gradient(to top, black 0%, transparent 52%);
+  }
+
+  .matrix-dots::after {
+    opacity: 0.12;
+  }
+
+  .bg-grid > *,
+  .matrix-dots > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @supports not (mask-image: linear-gradient(black, transparent)) {
+    .bg-grid::before,
+    .matrix-dots::before {
+      background: linear-gradient(to bottom, hsl(var(--foreground) / 0.08), transparent 48%);
+    }
+
+    .bg-grid::after,
+    .matrix-dots::after {
+      background: linear-gradient(to top, hsl(var(--foreground) / 0.08), transparent 42%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bg-grid::before,
+    .matrix-dots::before {
+      opacity: 0.24;
+      background-size: 82px 82px, 82px 82px, 40px 40px, 40px 40px;
+    }
+
+    .matrix-dots::before {
+      opacity: 0.14;
+    }
+
+    .bg-grid::after,
+    .matrix-dots::after {
+      opacity: 0.16;
+      background-size: 130% 34%, 62px 34%, 62px 34%, 130% 34%;
+    }
+
+    .matrix-dots::after {
+      opacity: 0.08;
+    }
   }
 }
 
