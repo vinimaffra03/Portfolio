@@ -11,16 +11,16 @@ const Index = () => {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background">
       <DotField
-        className="pointer-events-none fixed inset-0 z-20 opacity-60 mix-blend-screen"
-        dotRadius={1.45}
+        className="pointer-events-none fixed inset-0 z-20 opacity-75 mix-blend-screen"
+        dotRadius={1.6}
         dotSpacing={17}
         cursorRadius={420}
         bulgeStrength={46}
         glowRadius={260}
         sparkle
-        gradientFrom="rgba(103, 232, 249, 0.28)"
-        gradientTo="rgba(148, 163, 184, 0.16)"
-        glowColor="rgba(34, 211, 238, 0.28)"
+        gradientFrom="rgba(103, 232, 249, 0.36)"
+        gradientTo="rgba(148, 163, 184, 0.22)"
+        glowColor="rgba(34, 211, 238, 0.34)"
       />
       <Header />
       <main className="relative z-10">

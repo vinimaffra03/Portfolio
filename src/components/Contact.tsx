@@ -1,5 +1,6 @@
 import { Mail, Linkedin, Github } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import Magnet from "./reactbits/Magnet";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -27,34 +28,40 @@ const Contact = () => {
           </p>
 
           {/* Contact button */}
-          <a
-            href="mailto:viniciushmdem15@gmail.com"
-            className="inline-flex items-center gap-3 px-8 py-4 font-mono text-sm uppercase tracking-widest border border-foreground/30 text-foreground hover:bg-foreground hover:text-background transition-all duration-300 mb-12"
-          >
-            <Mail size={18} />
-            {t('contact.button')}
-          </a>
+          <Magnet padding={58} magnetStrength={20} wrapperClassName="mb-12">
+            <a
+              href="mailto:viniciushmdem15@gmail.com"
+              className="inline-flex items-center gap-3 px-8 py-4 font-mono text-sm uppercase tracking-widest border border-foreground/30 text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
+            >
+              <Mail size={18} />
+              {t('contact.button')}
+            </a>
+          </Magnet>
 
           {/* Social links */}
           <div className="flex items-center justify-center gap-6">
-            <a
-              href="https://github.com/vinimaffra03"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-subtle text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all duration-300"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/viniciusmaffra/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-subtle text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all duration-300"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
+            <Magnet padding={42} magnetStrength={18}>
+              <a
+                href="https://github.com/vinimaffra03"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex p-3 border border-subtle text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all duration-300"
+                aria-label="GitHub"
+              >
+                <Github size={20} />
+              </a>
+            </Magnet>
+            <Magnet padding={42} magnetStrength={18}>
+              <a
+                href="https://www.linkedin.com/in/viniciusmaffra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex p-3 border border-subtle text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+            </Magnet>
           </div>
         </div>
       </div>

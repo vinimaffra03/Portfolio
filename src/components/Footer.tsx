@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
+import DecryptedText from "./reactbits/DecryptedText";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -42,7 +43,13 @@ const Footer = () => {
             <span className="text-muted-foreground">{t('footer.prompt')}</span>
             <span className="text-foreground">{t('footer.domain')}</span>
             <span className="text-muted-foreground">:~$</span>
-            <span className="text-highlight ml-2">{t('footer.command')}</span>
+            <DecryptedText
+              text={t("footer.command")}
+              className="text-highlight ml-2"
+              encryptedClassName="text-muted-foreground"
+              speed={28}
+              iterations={8}
+            />
             <span className="text-foreground ml-1 animate-pulse">|</span>
           </div>
 
@@ -101,7 +108,15 @@ const Footer = () => {
           </span>
           
           <span className="font-mono text-xs text-muted-foreground">
-            SYSTEM_STATUS: <span className="text-green-500">OPERATIONAL</span>
+            SYSTEM_STATUS:{" "}
+            <DecryptedText
+              text="OPERATIONAL"
+              animateOn="view"
+              className="text-green-500"
+              encryptedClassName="text-muted-foreground"
+              speed={26}
+              iterations={10}
+            />
           </span>
         </div>
       </div>

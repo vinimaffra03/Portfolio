@@ -1,6 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import BlurText from "./reactbits/BlurText";
+import Magnet from "./reactbits/Magnet";
+import ShinyText from "./reactbits/ShinyText";
 
 const techBadges = [
   {
@@ -103,14 +105,16 @@ const Hero = () => {
 
         {/* CTA Button */}
         <div className="flex flex-col items-center gap-3 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-3 font-mono text-sm uppercase tracking-widest border border-foreground/30 text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
-          >
-            {t('hero.cta')}
-          </a>
+          <Magnet padding={48} magnetStrength={20}>
+            <a
+              href="#contact"
+              className="inline-flex items-center px-8 py-3 font-mono text-sm uppercase tracking-widest border border-foreground/30 text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
+            >
+              {t('hero.cta')}
+            </a>
+          </Magnet>
           <span className="max-w-full px-4 text-center font-mono text-xs text-muted-foreground">
-            {t('hero.ctaSubtext')}
+            <ShinyText text={t("hero.ctaSubtext")} speed={5.5} />
           </span>
         </div>
       </div>

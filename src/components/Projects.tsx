@@ -1,4 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
+import SpotlightCard from "./reactbits/SpotlightCard";
 
 const projects = [
   {
@@ -49,12 +50,13 @@ const Projects = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <a
+            <SpotlightCard
               key={project.id}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative overflow-hidden border border-subtle bg-card hover-lift cursor-pointer"
+              spotlightColor="rgba(103, 232, 249, 0.18)"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="aspect-video overflow-hidden">
@@ -77,7 +79,7 @@ const Projects = () => {
                   View project
                 </span>
               </div>
-            </a>
+            </SpotlightCard>
           ))}
         </div>
       </div>
